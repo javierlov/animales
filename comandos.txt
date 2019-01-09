@@ -1,0 +1,46 @@
+composer create-project --prefer-dist laravel/laravel mi-proyecto
+
+php artisan serve
+
+php artisan key:generate
+
+php artisan make:auth
+
+php artisan route:list
+
+crea un controlador con funciones vacias(recursos)
+php artisan make:controller NnnnController --resource
+
+crea nuevo modelo y migracion
+php artisan make:model Nnnnnn -mc
+
+crea un seed nuevo
+php artisan make:seeder NnnnnTableSeeder
+
+vuelve atras la ultima migracion
+php artisan migrate:rollback
+
+reinstala las migraciones y corre los seed
+php artisan migrate:refresh --seed
+
+ejecuta un seed especifico
+php artisan db:seed --class=RazasTableSeeder
+
+crea una tabla nueva en migrations
+php artisan make:migration create_ejemplos_table --create=ejemplos
+
+Añade una nueva tabla 
+php artisan make:migration add_nueva_tabla_table --table=nueva_tabla
+
+Actualiza las migraciones que aun no se ejecutaron
+php artisan migrate 
+
+php artisan make:request NnnnRequest
+
+crea un nuevo middleware y registrarlo en App/http/kernel.php
+C:\xampp\htdocs\animales>php artisan make:middleware Admin
+Middleware created successfully.
+
+agrega un archivo a migrations para agregar una columna a la tabla mascotas
+php artisan make:migration add_deleted_at_column_to_mascotas_tables --table=mascotas
+modificar el archivo y luego ejecutar 
